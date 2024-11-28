@@ -1,6 +1,7 @@
 import network
 import utime
-import machine
+# import machine
+from machine import Pin
 import usocket as socket
 
 def connect_wifi(ssid, password):
@@ -15,7 +16,7 @@ def connect_wifi(ssid, password):
     return station
 
 # gpio
-led = machine.Pin(2, machine.Pin.OUT)  # onboard LED
+led = Pin(2, Pin.OUT)  # onboard LED
 
 # set vars
 timer_running = False
